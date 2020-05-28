@@ -57,10 +57,6 @@
 
     }
 
-
-    
-
-    }
     @media ( max-width: 1048px){
     	label.logo{
     		font-size: 32px;
@@ -136,12 +132,10 @@
     		height: calc(100vh - 80px);
 
 
-
-
-
-
-
-
-
     }
-
+}
+#background-pic{
+	height: 15cm;
+	margin-left: 10cm;
+	padding: 0.5cm;
+}
