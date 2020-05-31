@@ -18,13 +18,17 @@ from django.urls import path
 from home import views
 from django.conf import settings
 from django.conf.urls.static import static
-
+from django.conf.urls import url, include
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('web/', views.web, name='web'),
     path('index/', views.index, name='index'),
+    url(r'^login/$', auth_views.LoginView.as_view(template_name='index.html'), name='login'),
+    url(r'^logout/$', auth_views.LogoutView, name='logout'),
+    url(r'^oauth/', include('social_django.urls', namespace='social'))
 
 ]
 
